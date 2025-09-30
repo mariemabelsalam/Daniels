@@ -1,0 +1,290 @@
+:root {
+  --secondary-color: rgb(52, 52, 52);
+  --text-color: rgb(116, 129, 130);
+  --main-transation: all 1s;
+  --light-gray: #f7f7f7;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+#navbar {
+  background-color: transparent;
+  transition: var(--main-transation);
+}
+#navbar.scrolled {
+  background-color: black;
+}
+.navbar-toggler-icon {
+  width: 25px;
+  height: 25px;
+}
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+.text-dark-gray {
+  color: var(--secondary-color);
+}
+.bg-davy-Gray {
+  background-color: #5b5b5b;
+}
+.slate-gray {
+  color: var(--text-color);
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+.fs-18 {
+  font-size: 1.125rem;
+}
+.fs-14 {
+  font-size: 0.875rem;
+}
+.fs-12 {
+  font-size: 0.75rem;
+}
+.letterspace {
+  letter-spacing: 2px;
+}
+.font-Montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-weight: 800;
+  font-size: 50px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/home.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+header nav .navbar-nav .nav-item a {
+  color: white;
+}
+.navbar-nav .nav-link.active {
+  color: white;
+  position: relative;
+}
+.navbar-nav .nav-link.active::after {
+  content: " ";
+  width: 70%;
+  height: 5%;
+  background-color: white;
+  position: absolute;
+  top: 75%;
+  left: 16%;
+}
+
+header .content p {
+  font-size: 60px;
+  font-family: "Montserrat", sans-serif;
+}
+
+header .content .brands span {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main .about .image {
+  position: relative;
+}
+main .about .image img {
+  position: relative;
+  z-index: 1;
+}
+main .about .image::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/dots.png);
+  position: absolute;
+  top: 6%;
+  left: -6%;
+  z-index: 0;
+}
+
+.progress {
+  height: 28px;
+}
+
+main .about .buttons .download {
+  background-color: black;
+  border: 1px solid transparent;
+  color: white;
+  transition: var(--main-transation);
+}
+main .about .buttons .download:hover {
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+}
+main .about .buttons .contact {
+  border: 1px solid black;
+  transition: var(--main-transation);
+}
+main .about .buttons .contact:hover {
+  background-color: black;
+  border: 1px solid transparent;
+  color: white;
+}
+
+main .main-head h2::before {
+  content: " ";
+  width: 20%;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-image: url(../images/dots.png);
+  z-index: -1;
+}
+main .services .content span,
+main .contact .content span {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: var(--main-transation);
+}
+main .services .content span i,
+main .works .image .layer span i {
+  cursor: pointer;
+}
+main .services .content:hover span,
+main .contact .content:hover span {
+  background-color: black;
+  color: white;
+}
+main .works .image .layer span {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  transition: var(--main-transation);
+}
+main .works .image .layer span i {
+  color: white;
+  transition: var(--main-transation);
+}
+main .works .image .layer span:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+main .works .image .layer span:hover i {
+  color: black;
+}
+
+main .works .image .layer {
+  background-color: white;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  bottom: 2%;
+  right: 2%;
+  opacity: 0;
+  transition: var(--main-transation);
+}
+main .works .image:hover .layer {
+  opacity: 1;
+}
+main .works .nav-underline .nav-link,
+main .works .nav-underline .nav-link:hover {
+  text-decoration: none;
+  border-bottom: none;
+}
+main .works .nav-underline .nav-link.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+main .clients img {
+  width: 100px;
+  height: 100px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #869791;
+}
+main .team .image {
+  position: relative;
+  cursor: pointer;
+}
+main .team .layer {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  right: 2%;
+  bottom: 2%;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: var(--main-transation);
+}
+main .team .layer span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  transition: var(--main-transation);
+}
+main .team .layer span:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+main .team .layer span i {
+  color: white;
+}
+main .team .layer span:hover i {
+  color: black;
+}
+main .team .card:hover .layer {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+main .team .image img {
+  transition: var(--main-transation);
+}
+main .team .image:hover img {
+  transform: scale(1.1);
+}
+main .contact button {
+  background-color: black;
+  color: white;
+  border: 1px solid transparent;
+  transition: var(--main-transation);
+  padding: 0 28px;
+}
+
+main .contact button:hover {
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+}
+@media (max-width: 990px) {
+  header nav .navbar-collapse {
+    background-color: white;
+    z-index: 1000;
+  }
+  header nav ul {
+    text-align: center;
+  }
+  header nav .navbar-collapse ul li a {
+    color: black !important;
+  }
+}
